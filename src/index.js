@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './styles/global.css'
+import 'slick-carousel/slick/slick.css'; // Import slick-carousel styles
+import 'slick-carousel/slick/slick-theme.css';
+import 'aos/dist/aos.css'; // Import AOS styles
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

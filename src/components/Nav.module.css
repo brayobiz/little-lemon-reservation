@@ -1,0 +1,156 @@
+.nav {
+  padding: 1rem 2rem;
+  background-color: white;
+}
+
+/* Navigation Header (Hamburger and Logo) */
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none; /* Hidden by default on larger screens */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transform-origin: center; /* Ensure transforms rotate around the center */
+  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hamburger Icon Animation when Open */
+.hamburgerOpen .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Hover effect for the hamburger icon */
+.hamburger:hover .hamburgerLine {
+  background-color: #FFC107; /* Yellow on hover */
+}
+
+/* Navigation List Styles */
+.navList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navList a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-align: center;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navList a:hover {
+  color: #FFC107; /* Yellow color on hover */
+  transform: scale(1.1); /* Slightly scale up on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+/* Logo Styles */
+.logo {
+  height: 40px; /* Adjust based on your logo size */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .navList {
+    gap: 1.5rem;
+  }
+
+  .navList a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.75rem 1rem;
+    position: relative;
+  }
+
+  /* Show hamburger icon on small screens */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Style nav list for mobile */
+  .navList {
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 100%; /* Position below the nav bar */
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-height: 0; /* Start collapsed */
+    opacity: 0; /* Start invisible */
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    z-index: 1000;
+  }
+
+  /* Show nav list when menu is open */
+  .navListOpen {
+    max-height: 500px; /* Large enough to fit the menu */
+    opacity: 1; /* Fade in */
+  }
+
+  .navList a {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 18px;
+  }
+
+  .navList {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .navList a {
+    font-size: 0.875rem;
+  }
+
+  .logo {
+    height: 30px; /* Smaller logo on very small screens */
+  }
+}

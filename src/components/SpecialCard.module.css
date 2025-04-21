@@ -1,0 +1,135 @@
+.card {
+  background-color: #F5F5F5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Ensure the image scales nicely */
+  border-radius: 5px 5px 0 0;
+}
+
+.content {
+  padding: 1.25rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: black;
+}
+
+.price {
+  color: #F57C00;
+  font-size: 1.125rem;
+}
+
+.description {
+  margin: 0.625rem 0;
+  color: black;
+  font-size: 1rem;
+}
+
+.orderButton {
+  background-color: gray;
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.orderButton:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .image {
+    height: 180px;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 1.125rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .orderButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .image {
+    height: 160px;
+  }
+
+  .content {
+    padding: 0.75rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 0.875rem;
+  }
+
+  .description {
+    font-size: 0.875rem;
+  }
+
+  .orderButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    height: 140px;
+  }
+
+  .content {
+    padding: 0.5rem;
+  }
+
+  .name {
+    font-size: 0.875rem;
+  }
+
+  .price {
+    font-size: 0.75rem;
+  }
+
+  .description {
+    font-size: 0.75rem;
+  }
+
+  .orderButton {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
