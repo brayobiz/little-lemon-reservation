@@ -6,8 +6,8 @@ function Hero() {
   return (
     <div className={styles.hero}>
       <div className={styles.textContent}>
-        <h1 className={styles.title}>Little Lemon</h1>
-        <h2 className={styles.location}>Chicago</h2>
+        <h1 className={styles.title}>Delix</h1>
+        <h2 className={styles.location}>Nairobi</h2>
         <p className={styles.description}>
           We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
         </p>
