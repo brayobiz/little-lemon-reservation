@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './SpecialCard.module.css';
 
 function SpecialCard({ special, ...aosProps }) {
@@ -15,7 +16,9 @@ function SpecialCard({ special, ...aosProps }) {
           <span className={styles.price}>{special.price}</span>
         </div>
         <p className={styles.description}>{special.description}</p>
-        <button className={styles.orderButton}>Order a delivery 🔗</button>
+          <Link to="/menu">
+            <button className={styles.orderButton}>Order a delivery 🔗</button>
+          </Link>
       </div>
     </div>
   );

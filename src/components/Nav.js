@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Nav.module.css';
-import logo from '../assets/images/aa38384d3942a55696d8070552aed2f4c190fc14.jpg';
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +17,7 @@ function Nav() {
           <span className={styles.hamburgerLine}></span>
           <span className={styles.hamburgerLine}></span>
         </div>
-        <img src={logo} alt="Little Lemon Logo" className={styles.logo} />
+        <img src="/assets/images/image-1.jpg" alt="Little Lemon Logo" className={styles.logo} />
       </div>
       <ul className={`${styles.navList} ${isMenuOpen ? styles.navListOpen : ''}`}>
         <li>

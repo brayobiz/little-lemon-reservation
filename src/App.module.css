@@ -1,0 +1,16 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the app takes up the full viewport height */
+}
+
+.mainContent {
+  flex: 1; /* Make the main content expand to fill available space */
+  padding-bottom: 60px; /* Add padding to prevent content from being hidden under the fixed footer */
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding-bottom: 80px; /* More padding on smaller screens to account for footer height */
+  }
+}

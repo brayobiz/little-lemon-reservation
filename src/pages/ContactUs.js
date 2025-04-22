@@ -56,9 +56,9 @@ function ContactUs() {
         <h1 data-aos="fade-down">Contact Us</h1>
         <div className={styles.contactInfo} data-aos="fade-right">
           <h2>Our Contact Details</h2>
-          <p>123 Lemon Street, Chicago, IL</p>
-          <p>Phone: (123) 456-7890</p>
-          <p>Email: <a href="mailto:info@littlelemon.com">info@littlelemon.com</a></p>
+          <p>00100 Moi Avenue Street, Nairobi, Kenya</p>
+          <p>Phone: +254112774925</p>
+          <p>Email: <a href="mailto:vexorprime159@gmail.com">vexorprime159@gmail.com</a></p>
         </div>
         <form onSubmit={handleSubmit} className={styles.form} data-aos="fade-left">
           <div className={styles.formGroup}>
@@ -98,7 +98,7 @@ function ContactUs() {
             {errors.subject && <p className={styles.error}>{errors.subject}</p>}
           </div>
           <div className={styles.formGroup}>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message">Message us</label>
             <textarea
               id="message"
               name="message"

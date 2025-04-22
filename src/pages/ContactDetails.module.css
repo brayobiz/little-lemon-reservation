@@ -1,0 +1,233 @@
+.contactDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #495E57;
+  color: white;
+  text-align: center;
+}
+
+.successMessageOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.successMessage {
+  background-color: #fff;
+  color: #000;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: center;
+  max-width: 80%;
+  animation: fadeOut 5s forwards;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+.formRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.required {
+  color: #ff4d4d;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.reservationSummary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.summaryItem .icon {
+  font-size: 1.2rem;
+}
+
+.privacyPolicy {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.privacyPolicy a {
+  color: #FFC107;
+  text-decoration: none;
+}
+
+.privacyPolicy a:hover {
+  text-decoration: underline;
+}
+
+.submitButton {
+  background-color: #FFC107;
+  color: #333;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #e0a800;
+}
+
+.imageGallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.imageGallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactDetailsContainer {
+    padding: 1.5rem;
+  }
+
+  .successMessage {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+
+  .formGroup label {
+    font-size: 0.9rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .reservationSummary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .imageGallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageGallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactDetailsContainer {
+    padding: 1rem;
+  }
+
+  .successMessage {
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .formGroup label {
+    font-size: 0.875rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.875rem;
+  }
+
+  .submitButton {
+    font-size: 0.875rem;
+  }
+}
